@@ -4,21 +4,19 @@ and then stream data from them to a plot.
 
 32 bit version
 
+***
 
 To Run:
 Windows:
 
-Install python3
+Install python3 (32bit) - tested with Python 3.8.6rc1
+https://www.python.org/downloads/
 
-Currently Python 3.8 has problems with PythonNet. Use Python 3.7 until it is fixed.
+Install package dependencies for use:
+python -m pip install -r requirements.txt
 
-pip install:
-Matplotlib
-Scipy
-pythonnet
-seaborn
-numpy
-setuptools
-wheel
+Go to /AeroPy/TrignoBase.py and copy paste key/license (be sure to wrap in quatations)
 
-run main.py
+Make sure base station is plugged in and has power.
+
+run Python_Demo_MultiThreaded.py

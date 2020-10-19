@@ -1696,25 +1696,13 @@
             Used to keep track of the decision point of a dynamic transition
             </summary>
         </member>
-        <member name="P:Stateless.Graph.Decision.Method">
-            <summary>
-            Gets the underlying method description of the invoked method.
-            </summary>
-        </member>
-        <member name="M:Stateless.Graph.Decision.#ctor(Stateless.Reflection.InvocationInfo,System.Int32)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Graph.Decision"/>.
-            </summary>
-            <param name="method">The name of the invoked method.</param>
-            <param name="num">The decision count.</param>
-        </member>
-        <member name="T:Stateless.Graph.GraphStyleBase">
+        <member name="T:Stateless.Graph.IGraphStyle">
             <summary>
             Style definition for StateGraph.
             Provides formatting of individual items in a state graph.
             </summary>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.GetPrefix">
+        <member name="M:Stateless.Graph.IGraphStyle.GetPrefix">
             <summary>
             Get the text that must be present at the top of a state graph file.
             For example, for DOT files the prefix text would be
@@ -1722,7 +1710,7 @@
             </summary>
             <returns>Prefix text</returns>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.FormatOneState(Stateless.Graph.State)">
+        <member name="M:Stateless.Graph.IGraphStyle.FormatOneState(Stateless.Graph.State)">
             <summary>
             Returns the formatted text for a single state.
             For example, for DOT files this would be the description of a single node:
@@ -1732,7 +1720,7 @@
             <param name="state">The state to generate text for</param>
             <returns>Description of the state in the desired format</returns>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.FormatOneCluster(Stateless.Graph.SuperState)">
+        <member name="M:Stateless.Graph.IGraphStyle.FormatOneCluster(Stateless.Graph.SuperState)">
             <summary>
             Returns the formatted text for a single superstate and its substates.
             For example, for DOT files this would be a subgraph containing nodes for all the substates.
@@ -1740,7 +1728,7 @@
             <param name="stateInfo">The superstate to generate text for</param>
             <returns>Description of the superstate, and all its substates, in the desired format</returns>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.FormatOneDecisionNode(System.String,System.String)">
+        <member name="M:Stateless.Graph.IGraphStyle.FormatOneDecisionNode(System.String,System.String)">
             <summary>
             Returns the formatted text for a single decision node.
             A decision node is created each time there is a PermitDynamic() transition.  There will be a transition
@@ -1752,7 +1740,7 @@
             <param name="label">Label for the node</param>
             <returns></returns>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.FormatAllTransitions(System.Collections.Generic.List{Stateless.Graph.Transition})">
+        <member name="M:Stateless.Graph.IGraphStyle.FormatAllTransitions(System.Collections.Generic.List{Stateless.Graph.Transition})">
             <summary>
             Returns the formatted text for all the transitions found in the state graph.
             This form, which can be overridden, determines the type of each transition and passes the appropriate
@@ -1761,7 +1749,7 @@
             <param name="transitions">List of all transitions in the state graph</param>
             <returns>Description of all transitions, in the desired format</returns>
         </member>
-        <member name="M:Stateless.Graph.GraphStyleBase.FormatOneTransition(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Stateless.Graph.IGraphStyle.FormatOneTransition(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{System.String})">
             <summary>
             Returns the formatted text for a single transition.  Only required if the default version of
             FormatAllTransitions() is used.
@@ -1813,18 +1801,6 @@
             Actions that are executed when you exit this state
             </summary>
         </member>
-        <member name="M:Stateless.Graph.State.#ctor(Stateless.Reflection.StateInfo)">
-            <summary>
-            Constructs a new instance of State.
-            </summary>
-            <param name="stateInfo">The state to be represented.</param>
-        </member>
-        <member name="M:Stateless.Graph.State.#ctor(System.String)">
-            <summary>
-            Constructs a new instance of State.
-            </summary>
-            <param name="nodeName">The node name.</param>
-        </member>
         <member name="T:Stateless.Graph.StateGraph">
             <summary>
             This class is used to generate a symbolic representation of the
@@ -1848,13 +1824,7 @@
             is a PermitDynamic() transition.
             </summary>
         </member>
-        <member name="M:Stateless.Graph.StateGraph.#ctor(Stateless.Reflection.StateMachineInfo)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Graph.StateGraph"/>.
-            </summary>
-            <param name="machineInfo">An object which exposes the states, transitions, and actions of this machine.</param>
-        </member>
-        <member name="M:Stateless.Graph.StateGraph.ToGraph(Stateless.Graph.GraphStyleBase)">
+        <member name="M:Stateless.Graph.StateGraph.ToGraph(Stateless.Graph.IGraphStyle)">
             <summary>
             Convert the graph into a string representation, using the specified style.
             </summary>
@@ -1897,12 +1867,6 @@
             List of states that are a substate of this state
             </summary>
         </member>
-        <member name="M:Stateless.Graph.SuperState.#ctor(Stateless.Reflection.StateInfo)">
-            <summary>
-            Constructs a new instance of SuperState.
-            </summary>
-            <param name="stateInfo">The super state to be represented.</param>
-        </member>
         <member name="T:Stateless.Graph.Transition">
             <summary>
             Used to keep track of transitions between states
@@ -1935,11 +1899,6 @@
             <param name="sourceState"></param>
             <param name="trigger"></param>
         </member>
-        <member name="T:Stateless.Graph.FixedTransition">
-            <summary>
-            Represents a fixed transition.
-            </summary>
-        </member>
         <member name="P:Stateless.Graph.FixedTransition.DestinationState">
             <summary>
             The state where this transition finishes
@@ -1948,20 +1907,6 @@
         <member name="P:Stateless.Graph.FixedTransition.Guards">
             <summary>
             Guard functions for this transition (null if none)
-            </summary>
-        </member>
-        <member name="M:Stateless.Graph.FixedTransition.#ctor(Stateless.Graph.State,Stateless.Graph.State,Stateless.Reflection.TriggerInfo,System.Collections.Generic.IEnumerable{Stateless.Reflection.InvocationInfo})">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Graph.FixedTransition"/>.
-            </summary>
-            <param name="sourceState">The source state.</param>
-            <param name="destinationState">The destination state.</param>
-            <param name="trigger">The trigger associated with this transition.</param>
-            <param name="guards">The guard conditions associated with this transition.</param>
-        </member>
-        <member name="T:Stateless.Graph.DynamicTransition">
-            <summary>
-            Represents a dynamic transition.
             </summary>
         </member>
         <member name="P:Stateless.Graph.DynamicTransition.DestinationState">
@@ -1973,34 +1918,6 @@
             <summary>
             When is this transition followed
             </summary>
-        </member>
-        <member name="M:Stateless.Graph.DynamicTransition.#ctor(Stateless.Graph.State,Stateless.Graph.State,Stateless.Reflection.TriggerInfo,System.String)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Graph.DynamicTransition"/>.
-            </summary>
-            <param name="sourceState">The source state.</param>
-            <param name="destinationState">The destination state.</param>
-            <param name="trigger">The trigger associated with this transition.</param>
-            <param name="criterion">The reason the destination state was chosen.</param>
-        </member>
-        <member name="T:Stateless.Graph.StayTransition">
-            <summary>
-            Represents a transition from a state to itself.
-            </summary>
-        </member>
-        <member name="P:Stateless.Graph.StayTransition.Guards">
-            <summary>
-            The guard conditions associated with this transition.
-            </summary>
-        </member>
-        <member name="M:Stateless.Graph.StayTransition.#ctor(Stateless.Graph.State,Stateless.Reflection.TriggerInfo,System.Collections.Generic.IEnumerable{Stateless.Reflection.InvocationInfo},System.Boolean)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Graph.StayTransition"/>.
-            </summary>
-            <param name="sourceState">The source state.</param>
-            <param name="trigger">The trigger associated with this transition.</param>
-            <param name="guards">The guard conditions associated with this transition.</param>
-            <param name="executeEntryExitActions">Sets whether the entry and exit actions are executed when the transition is enacted.</param>
         </member>
         <member name="T:Stateless.Graph.UmlDotGraph">
             <summary>
@@ -2022,14 +1939,6 @@
         <member name="M:Stateless.Graph.UmlDotGraphStyle.GetPrefix">
             <summary>Get the text that starts a new graph</summary>
             <returns></returns>
-        </member>
-        <member name="M:Stateless.Graph.UmlDotGraphStyle.FormatOneCluster(Stateless.Graph.SuperState)">
-            <summary>
-            Returns the formatted text for a single superstate and its substates.
-            For example, for DOT files this would be a subgraph containing nodes for all the substates.
-            </summary>
-            <param name="stateInfo">The superstate to generate text for</param>
-            <returns>Description of the superstate, and all its substates, in the desired format</returns>
         </member>
         <member name="M:Stateless.Graph.UmlDotGraphStyle.FormatOneState(Stateless.Graph.State)">
             <summary>
@@ -2166,27 +2075,6 @@
             Describes a transition that can be initiated from a trigger, but whose result is non-deterministic.
             </summary>
         </member>
-        <member name="P:Stateless.Reflection.DynamicTransitionInfo.DestinationStateSelectorDescription">
-            <summary>
-            Gets method informtion for the destination state selector.
-            </summary>
-        </member>
-        <member name="P:Stateless.Reflection.DynamicTransitionInfo.PossibleDestinationStates">
-            <summary>
-            Gets the possible destination states.
-            </summary>
-        </member>
-        <member name="M:Stateless.Reflection.DynamicTransitionInfo.Create``1(``0,System.Collections.Generic.IEnumerable{Stateless.Reflection.InvocationInfo},Stateless.Reflection.InvocationInfo,Stateless.Reflection.DynamicStateInfos)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Reflection.DynamicTransitionInfo"/>.
-            </summary>
-            <typeparam name="TTrigger">The trigger type.</typeparam>
-            <param name="trigger">The trigger associated with this transition.</param>
-            <param name="guards">The guard conditions associated with this transition.</param>
-            <param name="selector">The destination selector associated with this transition.</param>
-            <param name="possibleStates">The possible destination states.</param>
-            <returns></returns>
-        </member>
         <member name="T:Stateless.Reflection.FixedTransitionInfo">
             <summary>
             Describes a transition that can be initiated from a trigger.
@@ -2217,14 +2105,6 @@
         </member>
         <member name="F:Stateless.Reflection.InvocationInfo.Timing.Asynchronous">
             <summary>Method is asynchronous</summary>
-        </member>
-        <member name="M:Stateless.Reflection.InvocationInfo.#ctor(System.String,System.String,Stateless.Reflection.InvocationInfo.Timing)">
-            <summary>
-            Creates a new instance of <see cref="T:Stateless.Reflection.InvocationInfo"/>.
-            </summary>
-            <param name="methodName">The name of the invoked method.</param>
-            <param name="description">A description of the invoked method.</param>
-            <param name="timing">Sets a value indicating whether the method is invoked asynchronously.</param>
         </member>
         <member name="P:Stateless.Reflection.InvocationInfo.MethodName">
             <summary>
