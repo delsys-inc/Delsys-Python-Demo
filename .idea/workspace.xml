@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="83f05f31-ffe9-413a-a728-13a24f70f1e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonDemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonDemo.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Python Unit Test" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WRAUHXfGvdLIStmwcdGAwuRBL8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for PythonDemoTests.MainTest.test_something" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PythonDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;PythonDemoTests.MainTest.test_something&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for PythonDemoTests.PythonTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PythonDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;PythonDemoTests.PythonTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for PythonDemoTests.PythonTests.test_main" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PythonDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;PythonDemoTests.PythonTests.test_main&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in PythonDemoTests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PythonDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/PythonDemoTests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests for PythonDemoTests.PythonTests.test_main" />
+        <item itemvalue="Python tests.Unittests for PythonDemoTests.PythonTests" />
+        <item itemvalue="Python tests.Unittests in PythonDemoTests.py" />
+        <item itemvalue="Python tests.Unittests for PythonDemoTests.MainTest.test_something" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83f05f31-ffe9-413a-a728-13a24f70f1e0" name="Default Changelist" comment="" />
+      <created>1573585770634</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573585770634</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1974" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583420068401">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582754072037" />
+    <state x="1974" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583420068401" />
+    <state x="2151" y="423" width="739" height="587" key="#xdebugger.evaluate" timestamp="1583784744586">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state x="2151" y="423" width="739" height="587" key="#xdebugger.evaluate/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583784744586" />
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1583157862214">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1583157862214" />
+    <state x="2426" y="369" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1582662723674" />
+    <state width="1659" height="228" key="GridCell.Tab.0.bottom" timestamp="1584974879272">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="228" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1583785587818" />
+    <state width="1659" height="228" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1584974879272" />
+    <state width="1659" height="228" key="GridCell.Tab.0.center" timestamp="1584974879272">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="228" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1583785587816" />
+    <state width="1659" height="228" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1584974879272" />
+    <state width="1659" height="228" key="GridCell.Tab.0.left" timestamp="1584974879270">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="228" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1583785587816" />
+    <state width="1659" height="228" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1584974879270" />
+    <state width="1659" height="228" key="GridCell.Tab.0.right" timestamp="1584974879272">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="228" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1583785587817" />
+    <state width="1659" height="228" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1584974879272" />
+    <state width="1659" height="335" key="GridCell.Tab.1.bottom" timestamp="1583784924958">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582145658672" />
+    <state width="1659" height="335" key="GridCell.Tab.1.bottom/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583784924958" />
+    <state width="1659" height="335" key="GridCell.Tab.1.center" timestamp="1583784924958">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="336" key="GridCell.Tab.1.center/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582145658672" />
+    <state width="1659" height="335" key="GridCell.Tab.1.center/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583784924958" />
+    <state width="1659" height="335" key="GridCell.Tab.1.left" timestamp="1583784924957">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="336" key="GridCell.Tab.1.left/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582145658672" />
+    <state width="1659" height="335" key="GridCell.Tab.1.left/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583784924957" />
+    <state width="1659" height="335" key="GridCell.Tab.1.right" timestamp="1583784924958">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="336" key="GridCell.Tab.1.right/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582145658672" />
+    <state width="1659" height="335" key="GridCell.Tab.1.right/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583784924958" />
+    <state x="1916" y="100" key="SettingsEditor" timestamp="1583420149061">
+      <screen x="1680" y="0" width="1680" height="1010" />
+    </state>
+    <state x="440" y="111" key="SettingsEditor/0.0.1680.1010/1680.0.1680.1010@0.0.1680.1010" timestamp="1582145835225" />
+    <state x="1916" y="100" key="SettingsEditor/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1583420149061" />
+    <state x="128" y="0" width="1398" height="690" maximized="true" key="dock-window-1" timestamp="1582918824387">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="128" y="0" width="1398" height="690" maximized="true" key="dock-window-1/0.0.1680.1010/1680.0.1680.1010@1680.0.1680.1010" timestamp="1582918824387" />
+  </component>
+</project>

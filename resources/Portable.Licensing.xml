@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Portable.Licensing</name>
+    </assembly>
+    <members>
+        <member name="T:Portable.Licensing.AssemblyBuildDateAttribute">
+            <summary>
+            Defines assembly build date information for an assembly manifest.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.AssemblyBuildDateAttribute.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.AssemblyBuildDateAttribute"/> class
+            with the specified build date.
+            </summary>
+            <param name="buildDate">The build date of the assembly.</param>
+        </member>
+        <member name="M:Portable.Licensing.AssemblyBuildDateAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.AssemblyBuildDateAttribute"/> class
+            with the specified build date string.
+            </summary>
+            <param name="buildDateString">The build date of the assembly.</param>
+        </member>
+        <member name="P:Portable.Licensing.AssemblyBuildDateAttribute.BuildDate">
+            <summary>
+            Gets the assembly build date.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Customer">
+            <summary>
+            The customer of a <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.LicenseAttributes">
+            <summary>
+            Represents a dictionary of license attributes.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.#ctor(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.LicenseAttributes"/> class.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.Add(System.String,System.String)">
+            <summary>
+            Adds a new element with the specified key and value
+            to the collection.
+            </summary>
+            <param name="key">The key of the element.</param>
+            <param name="value">The value of the element.</param>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.AddAll(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Adds all new element into the collection.
+            </summary>
+            <param name="features">The dictionary of elements.</param>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.Remove(System.String)">
+            <summary>
+            Removes a element with the specified key
+            from the collection.
+            </summary>
+            <param name="key">The key of the element.</param>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.RemoveAll">
+            <summary>
+            Removes all elements from the collection.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.Get(System.String)">
+            <summary>
+            Gets the value of a element with the
+            specified key.
+            </summary>
+            <param name="key">The key of the element.</param>
+            <returns>The value of the element if available; otherwise null.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.GetAll">
+            <summary>
+            Gets all elements.
+            </summary>
+            <returns>A dictionary of all elements in this collection.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.Contains(System.String)">
+            <summary>
+            Determines whether the specified element is in
+            this collection.
+            </summary>
+            <param name="key">The key of the element.</param>
+            <returns>true if the collection contains this element; otherwise false.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseAttributes.ContainsAll(System.String[])">
+            <summary>
+            Determines whether all specified elements are in
+            this collection.
+            </summary>
+            <param name="keys">The list of keys of the elements.</param>
+            <returns>true if the collection contains all specified elements; otherwise false.</returns>
+        </member>
+        <member name="P:Portable.Licensing.Customer.Name">
+            <summary>
+            Gets or sets the Name of this <see cref="T:Portable.Licensing.Customer"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Customer.Company">
+            <summary>
+            Gets or sets the Company of this <see cref="T:Portable.Licensing.Customer"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Customer.Email">
+            <summary>
+            Gets or sets the Email of this <see cref="T:Portable.Licensing.Customer"/>.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.IFluentInterface">
+            <summary>
+            Interface that is used to build fluent interfaces and hides methods declared by <see cref="T:System.Object"/> from IntelliSense.
+            </summary>
+            <remarks>
+            Code that consumes implementations of this interface should expect one of two things:
+            <list type="number">
+              <item>When referencing the interface from within the same solution (project reference), you will still see the methods this interface is meant to hide.</item>
+              <item>When referencing the interface through the compiled output assembly (external reference), the standard Object methods will be hidden as intended.</item>
+            </list>
+            See http://bit.ly/ifluentinterface for more information.
+            </remarks>
+        </member>
+        <member name="M:Portable.Licensing.IFluentInterface.GetType">
+            <summary>
+            Redeclaration that hides the <see cref="M:System.Object.GetType"/> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.IFluentInterface.GetHashCode">
+            <summary>
+            Redeclaration that hides the <see cref="M:System.Object.GetHashCode"/> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.IFluentInterface.ToString">
+            <summary>
+            Redeclaration that hides the <see cref="M:System.Object.ToString"/> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.IFluentInterface.Equals(System.Object)">
+            <summary>
+            Redeclaration that hides the <see cref="M:System.Object.Equals(System.Object)"/> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.ILicenseBuilder">
+            <summary>
+            Fluent api to create and sign a new <see cref="T:Portable.Licensing.License"/>. 
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithUniqueIdentifier(System.Guid)">
+            <summary>
+            Sets the unique identifier of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="id">The unique identifier of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.As(Portable.Licensing.LicenseType)">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.LicenseType"/> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="type">The <see cref="T:Portable.Licensing.LicenseType"/> of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.ExpiresAt(System.DateTime)">
+            <summary>
+            Sets the expiration date of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="date">The expiration date of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithMaximumUtilization(System.Int32)">
+            <summary>
+            Sets the maximum utilization of the <see cref="T:Portable.Licensing.License"/>.
+            This can be the quantity of developers for a "per-developer-license".
+            </summary>
+            <param name="utilization">The maximum utilization of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.LicensedTo(System.String,System.String)">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="name">The name of the license holder.</param>
+            <param name="email">The email of the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.LicensedTo(System.String,System.String,System.Action{Portable.Licensing.Customer})">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="name">The name of the license holder.</param>
+            <param name="email">The email of the license holder.</param>
+            <param name="configureCustomer">A delegate to configure the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.LicensedTo(System.Action{Portable.Licensing.Customer})">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureCustomer">A delegate to configure the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithProductFeatures(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sets the licensed product features of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="productFeatures">The licensed product features of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithProductFeatures(System.Action{Portable.Licensing.LicenseAttributes})">
+            <summary>
+            Sets the licensed product features of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureProductFeatures">A delegate to configure the product features.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithAdditionalAttributes(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sets the licensed additional attributes of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="additionalAttributes">The additional attributes of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.WithAdditionalAttributes(System.Action{Portable.Licensing.LicenseAttributes})">
+            <summary>
+            Sets the licensed additional attributes of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureAdditionalAttributes">A delegate to configure the additional attributes.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.ILicenseBuilder.CreateAndSignWithPrivateKey(System.String,System.String)">
+            <summary>
+            Create and sign a new <see cref="T:Portable.Licensing.License"/> with the specified
+            private encryption key.
+            </summary>
+            <param name="privateKey">The private encryption key for the signature.</param>
+            <param name="passPhrase">The pass phrase to decrypt the private key.</param>
+            <returns>The signed <see cref="T:Portable.Licensing.License"/>.</returns>
+        </member>
+        <member name="T:Portable.Licensing.License">
+            <summary>
+            A software license
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.License.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.License"/> class.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.License.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.License"/> class
+            with the specified content.
+            </summary>
+            <remarks>This constructor is only used for loading from XML.</remarks>
+            <param name="xmlData">The initial content of this <see cref="T:Portable.Licensing.License"/>.</param>
+        </member>
+        <member name="M:Portable.Licensing.License.Sign(System.String,System.String)">
+            <summary>
+            Compute a signature and sign this <see cref="T:Portable.Licensing.License"/> with the provided key.
+            </summary>
+            <param name="privateKey">The private key in xml string format to compute the signature.</param>
+            <param name="passPhrase">The pass phrase to decrypt the private key.</param>
+        </member>
+        <member name="M:Portable.Licensing.License.VerifySignature(System.String)">
+            <summary>
+            Determines whether the <see cref="P:Portable.Licensing.License.Signature"/> property verifies for the specified key.
+            </summary>
+            <param name="publicKey">The public key in xml string format to verify the <see cref="P:Portable.Licensing.License.Signature"/>.</param>
+            <returns>true if the <see cref="P:Portable.Licensing.License.Signature"/> verifies; otherwise false.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.New">
+            <summary>
+            Create a new <see cref="T:Portable.Licensing.License"/> using the <see cref="T:Portable.Licensing.ILicenseBuilder"/>
+            fluent api.
+            </summary>
+            <returns>An instance of the <see cref="T:Portable.Licensing.ILicenseBuilder"/> class.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.Load(System.String)">
+            <summary>
+            Loads a <see cref="T:Portable.Licensing.License"/> from a string that contains XML.
+            </summary>
+            <param name="xmlString">A <see cref="T:System.String"/> that contains XML.</param>
+            <returns>A <see cref="T:Portable.Licensing.License"/> populated from the <see cref="T:System.String"/> that contains XML.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.Load(System.IO.Stream)">
+            <summary>
+            Loads a <see cref="T:Portable.Licensing.License"/> by using the specified <see cref="T:System.IO.Stream"/>
+            that contains the XML.
+            </summary>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> that contains the XML.</param>
+            <returns>A <see cref="T:Portable.Licensing.License"/> populated from the <see cref="T:System.IO.Stream"/> that contains XML.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.Load(System.IO.TextReader)">
+            <summary>
+            Loads a <see cref="T:Portable.Licensing.License"/> by using the specified <see cref="T:System.IO.TextReader"/>
+            that contains the XML.
+            </summary>
+            <param name="reader">A <see cref="T:System.IO.TextReader"/> that contains the XML.</param>
+            <returns>A <see cref="T:Portable.Licensing.License"/> populated from the <see cref="T:System.IO.TextReader"/> that contains XML.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.Load(System.Xml.XmlReader)">
+            <summary>
+            Loads a <see cref="T:Portable.Licensing.License"/> by using the specified <see cref="T:System.Xml.XmlReader"/>
+            that contains the XML.
+            </summary>
+            <param name="reader">A <see cref="T:System.Xml.XmlReader"/> that contains the XML.</param>
+            <returns>A <see cref="T:Portable.Licensing.License"/> populated from the <see cref="T:System.IO.TextReader"/> that contains XML.</returns>
+        </member>
+        <member name="M:Portable.Licensing.License.Save(System.IO.Stream)">
+            <summary>
+            Serialize this <see cref="T:Portable.Licensing.License"/> to a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> that the 
+            <see cref="T:Portable.Licensing.License"/> will be written to.</param>
+        </member>
+        <member name="M:Portable.Licensing.License.Save(System.IO.TextWriter)">
+            <summary>
+            Serialize this <see cref="T:Portable.Licensing.License"/> to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="textWriter">A <see cref="T:System.IO.TextWriter"/> that the 
+            <see cref="T:Portable.Licensing.License"/> will be written to.</param>
+        </member>
+        <member name="M:Portable.Licensing.License.Save(System.Xml.XmlWriter)">
+            <summary>
+            Serialize this <see cref="T:Portable.Licensing.License"/> to a <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xmlWriter">A <see cref="T:System.Xml.XmlWriter"/> that the 
+            <see cref="T:Portable.Licensing.License"/> will be written to.</param>
+        </member>
+        <member name="M:Portable.Licensing.License.ToString">
+            <summary>
+            Returns the indented XML for this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <returns>A string containing the indented XML.</returns>
+        </member>
+        <member name="P:Portable.Licensing.License.Id">
+            <summary>
+            Gets or sets the unique identifier of this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.License.Type">
+            <summary>
+            Gets or set the <see cref="T:Portable.Licensing.LicenseType"/> or this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.License.Quantity">
+            <summary>
+            Get or sets the quantity of this license.
+            E.g. the count of per-developer-licenses.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.License.ProductFeatures">
+            <summary>
+            Gets or sets the product features of this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.License.Customer">
+            <summary>
+            Gets or sets the <see cref="P:Portable.Licensing.License.Customer"/> of this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.License.AdditionalAttributes">
+            <summary>
+            Gets or sets the additional attributes of this <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Portable.Licensing.License.Expiration" -->
+        <member name="P:Portable.Licensing.License.Signature">
+            <summary>
+            Gets the digital signature of this license.
+            </summary>
+            <remarks>Use the <see cref="M:Portable.Licensing.License.Sign(System.String,System.String)"/> method to compute a signature.</remarks>
+        </member>
+        <member name="P:Portable.Licensing.License.IsSigned">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Portable.Licensing.License"/> is already signed.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.LicenseBuilder">
+            <summary>
+            Implementation of the <see cref="T:Portable.Licensing.ILicenseBuilder"/>, a fluent api
+            to create new licenses.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.LicenseBuilder"/> class.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithUniqueIdentifier(System.Guid)">
+            <summary>
+            Sets the unique identifier of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="id">The unique identifier of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.As(Portable.Licensing.LicenseType)">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.LicenseType"/> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="type">The <see cref="T:Portable.Licensing.LicenseType"/> of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.ExpiresAt(System.DateTime)">
+            <summary>
+            Sets the expiration date of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="date">The expiration date of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithMaximumUtilization(System.Int32)">
+            <summary>
+            Sets the maximum utilization of the <see cref="T:Portable.Licensing.License"/>.
+            This can be the quantity of developers for a "per-developer-license".
+            </summary>
+            <param name="utilization">The maximum utilization of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.LicensedTo(System.String,System.String)">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="name">The name of the license holder.</param>
+            <param name="email">The email of the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.LicensedTo(System.String,System.String,System.Action{Portable.Licensing.Customer})">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="name">The name of the license holder.</param>
+            <param name="email">The email of the license holder.</param>
+            <param name="configureCustomer">A delegate to configure the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.LicensedTo(System.Action{Portable.Licensing.Customer})">
+            <summary>
+            Sets the <see cref="T:Portable.Licensing.Customer">license holder</see> of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureCustomer">A delegate to configure the license holder.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithProductFeatures(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sets the licensed product features of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="productFeatures">The licensed product features of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithProductFeatures(System.Action{Portable.Licensing.LicenseAttributes})">
+            <summary>
+            Sets the licensed product features of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureProductFeatures">A delegate to configure the product features.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithAdditionalAttributes(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sets the licensed additional attributes of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="additionalAttributes">The additional attributes of the <see cref="T:Portable.Licensing.License"/>.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.WithAdditionalAttributes(System.Action{Portable.Licensing.LicenseAttributes})">
+            <summary>
+            Sets the licensed additional attributes of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="configureAdditionalAttributes">A delegate to configure the additional attributes.</param>
+            <returns>The <see cref="T:Portable.Licensing.ILicenseBuilder"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.LicenseBuilder.CreateAndSignWithPrivateKey(System.String,System.String)">
+            <summary>
+            Create and sign a new <see cref="T:Portable.Licensing.License"/> with the specified
+            private encryption key.
+            </summary>
+            <param name="privateKey">The private encryption key for the signature.</param>
+            <param name="passPhrase">The pass phrase to decrypt the private key.</param>
+            <returns>The signed <see cref="T:Portable.Licensing.License"/>.</returns>
+        </member>
+        <member name="T:Portable.Licensing.LicenseType">
+            <summary>
+            Defines the type of a <see cref="T:Portable.Licensing.License"/>
+            </summary>
+        </member>
+        <member name="F:Portable.Licensing.LicenseType.Trial">
+            <summary>
+            For trial or demo use
+            </summary>
+        </member>
+        <member name="F:Portable.Licensing.LicenseType.Standard">
+            <summary>
+            Standard license
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyFactory.ToEncryptedPrivateKeyString(Org.BouncyCastle.Crypto.AsymmetricKeyParameter,System.String)">
+            <summary>
+            Encrypts and encodes the private key.
+            </summary>
+            <param name="key">The private key.</param>
+            <param name="passPhrase">The pass phrase to encrypt the private key.</param>
+            <returns>The encrypted private key.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyFactory.FromEncryptedPrivateKeyString(System.String,System.String)">
+            <summary>
+            Decrypts the provided private key.
+            </summary>
+            <param name="privateKey">The encrypted private key.</param>
+            <param name="passPhrase">The pass phrase to decrypt the private key.</param>
+            <returns>The private key.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyFactory.ToPublicKeyString(Org.BouncyCastle.Crypto.AsymmetricKeyParameter)">
+            <summary>
+            Encodes the public key into DER encoding.
+            </summary>
+            <param name="key">The public key.</param>
+            <returns>The encoded public key.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyFactory.FromPublicKeyString(System.String)">
+            <summary>
+            Decoded the public key from DER encoding.
+            </summary>
+            <param name="publicKey">The encoded public key.</param>
+            <returns>The public key.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Security.Cryptography.KeyGenerator">
+            <summary>
+            Represents a generator for signature keys of <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.Security.Cryptography.KeyGenerator"/> class
+            with a key size of 256 bits.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyGenerator.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.Security.Cryptography.KeyGenerator"/> class
+            with the specified key size.
+            </summary>
+            <remarks>Following key sizes are supported:
+            - 192
+            - 224
+            - 239
+            - 256 (default)
+            - 384
+            - 521</remarks>
+            <param name="keySize">The key size.</param>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyGenerator.#ctor(System.Int32,System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.Security.Cryptography.KeyGenerator"/> class
+            with the specified key size and seed.
+            </summary>
+            <remarks>Following key sizes are supported:
+            - 192
+            - 224
+            - 239
+            - 256 (default)
+            - 384
+            - 521</remarks>
+            <param name="keySize">The key size.</param>
+            <param name="seed">The seed.</param>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyGenerator.Create">
+            <summary>
+            Creates a new instance of the <see cref="T:Portable.Licensing.Security.Cryptography.KeyGenerator"/> class.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyGenerator.GenerateKeyPair">
+            <summary>
+            Generates a private/public key pair for license signing.
+            </summary>
+            <returns>An <see cref="T:Portable.Licensing.Security.Cryptography.KeyPair"/> containing the keys.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Security.Cryptography.KeyPair">
+            <summary>
+            Represents a private/public encryption key pair.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyPair.#ctor(Org.BouncyCastle.Crypto.AsymmetricCipherKeyPair)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Portable.Licensing.Security.Cryptography.KeyPair"/> class
+            with the provided asymmetric key pair.
+            </summary>
+            <param name="keyPair"></param>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyPair.ToEncryptedPrivateKeyString(System.String)">
+            <summary>
+            Gets the encrypted and DER encoded private key.
+            </summary>
+            <param name="passPhrase">The pass phrase to encrypt the private key.</param>
+            <returns>The encrypted private key.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Security.Cryptography.KeyPair.ToPublicKeyString">
+            <summary>
+            Gets the DER encoded public key.
+            </summary>
+            <returns>The public key.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Validation.GeneralValidationFailure">
+            <summary>
+            Represents a general validation failure.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IValidationFailure">
+            <summary>
+            Represents a failure of a <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.IValidationFailure.Message">
+            <summary>
+            Gets or sets a message that describes the validation failure.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.IValidationFailure.HowToResolve">
+            <summary>
+            Gets or sets a message that describes how to recover from the validation failure.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.GeneralValidationFailure.Message">
+            <summary>
+            Gets or sets a message that describes the validation failure.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.GeneralValidationFailure.HowToResolve">
+            <summary>
+            Gets or sets a message that describes how to recover from the validation failure.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IAddAdditionalValidationChain">
+            <summary>
+            Interface for the fluent validation syntax.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Validation.IAddAdditionalValidationChain.And">
+            <summary>
+            Adds an additional validation chain.
+            </summary>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IAssertValidation">
+            <summary>
+            Interface for the fluent validation syntax.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Validation.IAssertValidation.AssertValidLicense">
+            <summary>
+            Invokes the license assertion.
+            </summary>
+            <returns>An array is <see cref="T:Portable.Licensing.Validation.IValidationFailure"/> when the validation fails.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Validation.ICompleteValidationChain">
+            <summary>
+            Interface for the fluent validation syntax.
+            This interface is used to complete a validation chain.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.ILicenseValidator">
+            <summary>
+            Represents a <see cref="T:Portable.Licensing.License"/> validator.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.ILicenseValidator.Validate">
+            <summary>
+            Gets or sets the predicate to determine if the <see cref="T:Portable.Licensing.License"/>
+            is valid.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.ILicenseValidator.ValidateWhen">
+            <summary>
+            Gets or sets the predicate to determine if the <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/>
+            should be executed.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.ILicenseValidator.FailureResult">
+            <summary>
+            Gets or sets the <see cref="T:Portable.Licensing.Validation.IValidationFailure"/> result. The <see cref="T:Portable.Licensing.Validation.IValidationFailure"/>
+            will be returned to the application when the <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/> fails.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.InvalidSignatureValidationFailure">
+            <summary>
+            Represents a failure when the <see cref="P:Portable.Licensing.License.Signature"/> is invalid.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.InvalidSignatureValidationFailure.Message">
+            <summary>
+            Gets or sets a message that describes the validation failure.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.InvalidSignatureValidationFailure.HowToResolve">
+            <summary>
+            Gets or sets a message that describes how to recover from the validation failure.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IStartValidationChain">
+            <summary>
+            Interface for the fluent validation syntax.
+            Validators should use this interface to start a new validation chain.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IValidationChain">
+            <summary>
+            Interface for the fluent validation syntax.
+            This interface is used to add a condition or to complete a validation chain.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.IValidationChainCondition">
+            <summary>
+            Interface for the fluent validation syntax.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Validation.IValidationChainCondition.When(System.Predicate{Portable.Licensing.License})">
+            <summary>
+            Adds a when predicate to the current validator.
+            </summary>
+            <param name="predicate">The predicate that defines the conditions.</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.ICompleteValidationChain"/>.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Validation.LicenseExpiredValidationFailure">
+            <summary>
+            Represents a <see cref="T:Portable.Licensing.License"/> expired failure of a <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/>.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.LicenseExpiredValidationFailure.Message">
+            <summary>
+            Gets or sets a message that describes the validation failure.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.LicenseExpiredValidationFailure.HowToResolve">
+            <summary>
+            Gets or sets a message that describes how to recover from the validation failure.
+            </summary>
+        </member>
+        <member name="T:Portable.Licensing.Validation.LicenseValidationExtensions">
+            <summary>
+            Extension methods for <see cref="T:Portable.Licensing.License"/> validation.
+            </summary>
+        </member>
+        <member name="M:Portable.Licensing.Validation.LicenseValidationExtensions.Validate(Portable.Licensing.License)">
+            <summary>
+            Starts the validation chain of the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="license">The <see cref="T:Portable.Licensing.License"/> to validate.</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Validation.LicenseValidationExtensions.ExpirationDate(Portable.Licensing.Validation.IStartValidationChain)">
+            <summary>
+            Validates if the license has been expired.
+            </summary>
+            <param name="validationChain">The current <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Validation.LicenseValidationExtensions.ProductBuildDate(Portable.Licensing.Validation.IStartValidationChain,System.Reflection.Assembly[])">
+            <summary>
+            Check whether the product build date of the provided assemblies
+            exceeded the <see cref="P:Portable.Licensing.License.Expiration"/> date.
+            </summary>
+            <param name="validationChain">The current <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</param>
+            <param name="assemblies">The list of assemblies to check.</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Validation.LicenseValidationExtensions.AssertThat(Portable.Licensing.Validation.IStartValidationChain,System.Predicate{Portable.Licensing.License},Portable.Licensing.Validation.IValidationFailure)">
+            <summary>
+            Allows you to specify a custom assertion that validates the <see cref="T:Portable.Licensing.License"/>.
+            </summary>
+            <param name="validationChain">The current <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</param>
+            <param name="predicate">The predicate to determine of the <see cref="T:Portable.Licensing.License"/> is valid.</param>
+            <param name="failure">The <see cref="T:Portable.Licensing.Validation.IValidationFailure"/> will be returned to the application when the <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/> fails.</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="M:Portable.Licensing.Validation.LicenseValidationExtensions.Signature(Portable.Licensing.Validation.IStartValidationChain,System.String)">
+            <summary>
+            Validates the <see cref="P:Portable.Licensing.License.Signature"/>.
+            </summary>
+            <param name="validationChain">The current <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</param>
+            <param name="publicKey">The public product key to validate the signature..</param>
+            <returns>An instance of <see cref="T:Portable.Licensing.Validation.IStartValidationChain"/>.</returns>
+        </member>
+        <member name="T:Portable.Licensing.Validation.LicenseValidator">
+            <summary>
+            Represents a <see cref="T:Portable.Licensing.License"/> validator.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.LicenseValidator.Validate">
+            <summary>
+            Gets or sets the predicate to determine if the <see cref="T:Portable.Licensing.License"/>
+            is valid.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.LicenseValidator.ValidateWhen">
+            <summary>
+            Gets or sets the predicate to determine if the <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/>
+            should be executed.
+            </summary>
+        </member>
+        <member name="P:Portable.Licensing.Validation.LicenseValidator.FailureResult">
+            <summary>
+            Gets or sets the <see cref="T:Portable.Licensing.Validation.IValidationFailure"/> result. The <see cref="T:Portable.Licensing.Validation.IValidationFailure"/>
+            will be returned to the application when the <see cref="T:Portable.Licensing.Validation.ILicenseValidator"/> fails.
+            </summary>
+        </member>
+    </members>
+</doc>
