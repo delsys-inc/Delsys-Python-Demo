@@ -1,3 +1,8 @@
+** This Repository is Outdated ** Visit [Delsys Example Applications](https://github.com/delsys-inc/Example-Applications) Repository for up-to-date examples
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 This is a Python example gui that utilizes the Delsys API in order to demonstrate functionality that users can
 implement in their own code. This example allows a user to connect to the base, scan for sensors, pair new sensors,
 and then stream data from them to a plot.
